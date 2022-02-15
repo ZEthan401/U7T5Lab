@@ -6,7 +6,17 @@ public class Search {
     // a target int is found in an array of ints (both the target and int array
     // should be accepted as parameters); return -1 if target is not found
     // BE SURE TO USE EARLY RETURN (more efficient)
-
+    public static int linearSearch(int[] elements, int target)
+    {
+        for (int j = 0; j < elements.length; i++)
+        {
+            if (elements[j] == target)
+            {
+                return j;
+            }
+        }
+        return -1;
+    }
 
 
 
@@ -15,7 +25,17 @@ public class Search {
     // instead of returning an index, it returns true if target is found or false
     // if target is not found
     // AGAIN, BE SURE TO USE EARLY RETURN
-
+    public static boolean linearSearchIsFound(int[] elements, int target)
+    {
+        for (int num : elements)
+        {
+            if (num == target)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 
@@ -24,7 +44,17 @@ public class Search {
     // of Integers (rather than an array of ints) and a target int; return the first index
     // at which the target is found, or return -1 if target is not found
     // BE SURE TO USE EARLY RETURN
-
+    public static int linearSearch(ArrayList<Integer> elements, int target)
+    {
+        for (int j = 0; j < elements.size(); j++)
+        {
+            if (elements.get(j) == target)
+            {
+                return j;
+            }
+        }
+        return -1;
+    }
 
 
 
@@ -33,7 +63,17 @@ public class Search {
     // of Strings and a target String; return the first index at which the target is found,
     // or return -1 if target is not found
     // BE SURE TO USE EARLY RETURN
-
+    public static int linearSearch(String[] elements, String target)
+    {
+        for (int j = 0; j < elements.length; j++)
+        {
+            if (elements[j].equals(target))
+            {
+                return j;
+            }
+        }
+        return -1;
+    }
 
 
 
