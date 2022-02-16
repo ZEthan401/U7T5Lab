@@ -8,7 +8,7 @@ public class Search {
     // BE SURE TO USE EARLY RETURN (more efficient)
     public static int linearSearch(int[] elements, int target)
     {
-        for (int j = 0; j < elements.length; i++)
+        for (int j = 0; j < elements.length; j++)
         {
             if (elements[j] == target)
             {
@@ -81,7 +81,19 @@ public class Search {
     // E. write a "linearSearchLast" method that accepts an array of ints and a
     // target int, and return the LAST index at which the target is found,
     // or return -1 if target is not found
+    public static int linearSearchLast(int[] elements, int target)
+    {
+        int last = -1;
 
+        for (int j = 0; j < elements.length; j++)
+        {
+            if (elements[j] == target)
+            {
+                last = j;
+            }
+        }
+        return last;
+    }
 
 
 
@@ -90,8 +102,29 @@ public class Search {
     // accepts an array of ints and a target int, and the other that accepts an ArrayList
     // of Integers and a target int.  Each method should return the NUMBER OF TIMES
     // the target appears in the array/ArrayList.
+    public static int linearSearchCount(int[] elements, int target)
+    {
+        int count = 0;
+        for (int num : elements)
+        {
+            if (num == target)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 
-
-
-
+    public static int linearSearchCount(ArrayList<Integer> elements, int target)
+    {
+        int count = 0;
+        for (int num : elements)
+        {
+            if (num == target)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }
